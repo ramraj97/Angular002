@@ -1,0 +1,71 @@
+<form #formdata="ngForm" (ngSubmit)="updateEmployee(formdata.value)">
+   
+    <div class="col-md-6">
+    
+       
+    
+    <div>
+    <label for="fn" >First Name</label>
+    <input type="text" class="form-control" name="firstname" id="fn" ngModel [(ngModel)]="data.Firstname"> 
+    </div>
+       
+    <div>
+    <label for="ln">Last Name</label>
+    <input type="text" class="form-control" name="lastname" id="ln" ngModel  [(ngModel)]="data.Lastname">
+    </div>
+    
+    <div>
+    <label for="em">Email</label>
+    <input type="email" class="form-control" name="email" id="em" ngModel [(ngModel)]="data.Email">
+    </div>  
+    
+    <div>
+    <label for="cn">Contect Number</label>
+    <input type="text" class="form-control" name="Contect" id="cn" ngModel [(ngModel)]="data.Contect">
+    </div>
+    
+    <div>   
+    <label id="ad">Address</label>
+    <textarea name="address" class="form-control" id="ad" ngModel [(ngModel)]="data.Adress"></textarea>
+    </div>
+    
+    <div>   
+    <label for="un">Username</label>
+    <input type="text" class="form-control" name="user" id="un" ngModel [(ngModel)]="data.Username">
+    </div>
+    
+    <div>    
+    <label for="ps">Password</label>
+    <input type="Password" class="form-control" name="Password" id="ps" ngModel [(ngModel)]="data.Password">
+    </div>
+    
+    <div>   
+    <label>Gender</label>
+    <div>
+    <input type="radio" name="gender"   value="male" ngModel [(ngModel)]="data.Gender">Male
+    <input type="radio" name="gender"   value="female"    ngModel [(ngModel)]="data.Gender">Female
+    </div>
+    </div>
+      
+    
+    <div><label id="qu">Qualification</label>
+    <select name= "Qualification" class="custom-select" id="qu" ngModel [(ngModel)]="data.Qualification">
+        <option *ngFor="let q of QualificationArray" [ngValue]= "q" >{{q}}</option>
+    </select>
+    </div>
+     
+    <div>
+    <label id="ex">Experience</label>
+    <select name="Experience" class="custom-select" id="ex" ngModel [(ngModel)]="data.Experience">
+        <option *ngFor='let a of ExperienceArray' [ngValue]= "a">{{a}}</option>
+    </select>
+    </div>
+     
+       
+    <div>   
+    <button type="submit" value="submit"  class="btn btn-primary">save</button>
+    </div>
+    
+    
+    </div>
+    </form>

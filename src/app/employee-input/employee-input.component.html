@@ -1,0 +1,72 @@
+
+<form #formdata="ngForm" (ngSubmit)="postEmployee(formdata.value)">
+   
+    <div class="col-md-6">
+    
+       
+    
+    <div>
+    <label for="fn" >First Name</label>
+    <input type="text" class="form-control" name="firstname" id="fn" ngModel>
+    </div>
+       
+    <div>
+    <label for="ln">Last Name</label>
+    <input type="text" class="form-control" name="lastname" id="ln" ngModel>
+    </div>
+    
+    <div>
+    <label for="em">Email</label>
+    <input type="email" class="form-control" name="email" id="em" ngModel>
+    </div>  
+    
+    <div>
+    <label for="cn">Contect Number</label>
+    <input type="text" class="form-control" name="Contect" id="cn" ngModel>
+    </div>
+    
+    <div>   
+    <label id="ad">Address</label>
+    <textarea name="address" class="form-control" id="ad" ngModel></textarea>
+    </div>
+    
+    <div>   
+    <label for="un">Username</label>
+    <input type="text" class="form-control" name="user" id="un" ngModel>
+    </div>
+    
+    <div>    
+    <label for="ps">Password</label>
+    <input type="Password" class="form-control" name="Password" id="ps" ngModel>
+    </div>
+    
+    <div>   
+    <label>Gender</label>
+    <div>
+    <input type="radio" name="gender"   value="male" ngModel>Male
+    <input type="radio" name="gender"   value="female"    ngModel>Female
+    </div>
+    </div>
+      
+    
+    <div><label id="qu">Qualification</label>
+    <select name= "Qualification" class="custom-select" id="qu" ngModel >
+        <option *ngFor="let q of QualificationArray" [ngValue]= "q" >{{q}}</option>
+    </select>
+    </div>
+     
+    <div>
+    <label id="ex">Experience</label>
+    <select name="Experience" class="custom-select" id="ex" ngModel>
+        <option *ngFor='let a of ExperienceArray' [ngValue]= "a">{{a}}</option>
+    </select>
+    </div>
+     
+       
+    <div>   
+    <button type="submit" value="submit"  class="btn btn-primary">Submit</button>
+    </div>
+    
+    
+    </div>
+    </form>

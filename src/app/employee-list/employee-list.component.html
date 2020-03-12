@@ -1,0 +1,34 @@
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th width=400>FIRST NAME</th>
+        <th width=400>LAST NAME</th>
+        <th width=250>EMAIL</th>
+        <th width=400>CONTACT</th>
+        <th width=400>ADRESS</th>
+        <th width=250>USER NAME</th>
+        <th width=400>GENDER</th>
+        <th width=400>QUALIFICATION</th>
+        <th width=250>EXPERIENCE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeelist; let i=index">
+        <td>{{employee.FirstName}}</td>
+        <td>{{employee.LastName}}</td>
+        <td>{{employee.Email}}</td>
+        <td>{{employee.Contact}}</td>
+        <td>{{employee.Adress}}</td>
+        <td>{{employee.UserName}}</td>
+        <td>{{employee.Gender}}</td>
+        <td>{{employee.Qualification}}</td>
+        <td>{{employee.Experience}}</td>
+        <td (click)="deleteEmployee(employee.id)" ><a class="btn btn-success"  >Edit</a></td>
+        <td [routerLink]="['/update',employee.id]"> <a class="btn btn-danger"  >Delete</a></td>   
+           
+        
+      </tr>
+
+    </tbody>
+  </table>

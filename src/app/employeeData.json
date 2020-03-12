@@ -1,0 +1,16 @@
+{
+  "employees": [
+    { "FirstName" : "sky" ,
+      "LastName" :  "bond" ,
+      "Email" :  "sky@134",
+      "Contact" :  "4568",
+      "Adress" :  "ghj",
+      "UserName" :  "sa",
+      "Password" :  "kk",
+      "Gender" :  "female",
+      "Qualification" : "btech",
+      "Experience" :  "0-1 year",
+      "id" : 1
+    } 
+  ]
+}
